@@ -1,0 +1,16 @@
+box: node:4.2.6-slim
+#  - id:
+#    ports:
+#      - "8888"
+
+dev:
+  steps:
+    - script:
+        name: install serve-here
+        code: npm install -g serve-here
+
+    # A custom script step, name value is used in the UI
+    # and the code value contains the command that get executed
+    - internal/watch:
+        code: sleep 3 && here -p 8888
+        reload: false
