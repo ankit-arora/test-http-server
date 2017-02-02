@@ -146,6 +146,7 @@ http index page
     (function(){
         var confirmButton = document.getElementById('wzrk-confirm-after-accept');
         var wrapper = document.getElementById('wzrk_wrapper_after_accept');
+        var parentWrapper = wrapper.parentElement;
         confirmButton.addEventListener('click', function() {
             setTimeout(function() {
                 console.log("open popup window");
@@ -158,6 +159,10 @@ http index page
                 var obj = JSON.parse(event.data);
                 if(typeof obj.state !== "undefined"){
                     if(obj.state === "granted"){
+                        if(typeof parentWrapper !== "undefined"){
+                            parentWrapper.style.display = "block";
+                            parentWrapper.style.visibility = "visible";
+                        }
                         wrapper.style.display = "block";
                     }
                 }
