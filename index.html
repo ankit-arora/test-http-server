@@ -3,174 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>http index</title>
+    <script type="text/javascript">
+        var clevertap = {event:[], profile:[], account:[], notifications:[]};
+        clevertap.account.push({"id": "846-Z7Z-6K4Z"});
+    </script>
 </head>
 <body>
 http index page
 
-<div id="wzrk_wrapper_after_accept" style="display: none">
-    <style>
-        .wzrk-overlay-after-accept{background-color:rgba(0,0,0,.15);position:fixed;left:0;right:0;top:0;bottom:0;z-index:10000}
-        .wzrk-hidden-after-accept{display:none}
-        .wzrk-alert-after-accept{
-            background-color:#fbfbfb;
-            border:1px solid #f0f0f0;
-            font-family: Arial,sans-serif;
-            width:346px;
-            padding:15px 15px 5px;
-            border-radius:6px;
-            text-align:center;
-            position:fixed;
-            right:300px;
-            top:20px;
-            margin-left:0;
-            margin-top:0;
-            overflow:hidden;
-            z-index:99999
-        }
-        @media screen and (max-width:540px){
-            .wzrk-alert-after-accept{
-                width:auto;
-                margin:auto 0;
-                top:35%;
-                left:15px;
-                right:15px
-            }
-        }
-        .wzrk-alert-heading-after-accept{
-            color:#606060;
-            font-size:20px;
-            width:250px;
-            animation:none;
-            text-align:center;
-            font-weight:700;
-            margin:0 auto 10px;display:block
-        }
-        .wzrk-alert-body-after-accept{
-            color:#939393;
-            font-size:14px;
-            font-weight:300;
-            animation:none;
-            margin-bottom:10px
-        }
-        .wzrk-button-container-after-accept button{
-            background-color:#dbdbdb;
-            color:#fff;
-            border:none!important;
-            box-shadow:none!important;
-            min-width:130px;
-            font-size:14px;
-            animation:none;
-            font-weight:100;
-            border-radius:3px;
-            padding:8px 10px;
-            margin:0 7px;cursor:pointer
-        }
-        .wzrk-alert-after-accept button:focus{
-            outline:0
-        }
-        .wzrk-alert-after-accept button:active{
-            background:#5dc241
-        }
-        .wzrk-alert-after-accept button.confirm{
-            background-color:#f28046
-        }
-        .wzrk-button-container-after-accept button.cancel{
-            background-color:#dbdbdb;color:#7c7c7c
-        }
-        .wzrk-button-container-after-accept button.cancel:hover{
-            background-color:#d7d7d7
-        }
-        .wzrk-powered-after-accept{
-            font-family: Arial,sans-serif;
-            font-size:9px;color:#777;animation:none;
-            margin-top:12px;
-            margin-right:2px;
-            text-align:right
-        }
-        .wzrk-powered-after-accept img{
-            display:inline-block;
-            animation:none;
-            margin-bottom:-2px;
-            -webkit-filter:contrast(10%);filter:grayscale(150%)
-        }
-        @-webkit-keyframes showWizAlert{
-            0%{
-                transform:scale(.7);
-                -webkit-transform:scale(.7)
-            }
-            45%{
-                transform:scale(1.05);
-                -webkit-transform:scale(1.05)
-            }
-            80%{
-                transform:scale(.95);
-                -webkit-transform:scale(.95)
-            }
-            100%{
-                transform:scale(1);
-                -webkit-transform:scale(1)
-            }
-        }
-        @-webkit-keyframes hideWizAlert{
-            0%{
-                transform:scale(1);
-                -webkit-transform:scale(1)
-            }
-            100%{
-                transform:scale(.5);
-                -webkit-transform:scale(.5)
-            }
-        }
-        .wiz-show-animate{
-            animation:showWizAlert .3s
-        }
-        .wiz-hide-animate{
-            animation:hideWizAlert .2s
-        }
-    </style>
-    <div class="wzrk-overlay-after-accept"></div>
-    <div class="wzrk-alert-after-accept wiz-show-animate">
-        <div class="wzrk-alert-heading-after-accept">Hey!!</div>
-        <div class="wzrk-alert-body-after-accept">Thank You for subscribing to our notifications</div>
-        <div class="wzrk-button-container-after-accept">
-            <button id="wzrk-confirm-after-accept" class="Sign me Up!" style="background-color: rgb(242, 128, 70);">Close</button>
-        </div>
-        <div class="wzrk-powered-after-accept">
-            Powered by <a href="https://clevertap.com" target="_blank">
-            <img src="https://d2r1yp2w7bby2u.cloudfront.net/js/ct_logo.svg" height="9" style="height:9px;">
-        </a>
-        </div>
-    </div>
-</div>
 <script>
-    (function(){
-        var confirmButton = document.getElementById('wzrk-confirm-after-accept');
-        var wrapper = document.getElementById('wzrk_wrapper_after_accept');
-        var parentWrapper = wrapper.parentElement;
-        confirmButton.addEventListener('click', function() {
-            setTimeout(function() {
-                console.log("open popup window");
-                window.open("https://ankit-arora.github.io/popup.html","_blank", "width=192, height=185");
-                wrapper.style.display = "none";
-            }, 100);
-        });
-        window.addEventListener("message", function(event){
-            if(typeof event.data !== "undefined"){
-                var obj = JSON.parse(event.data);
-                if(typeof obj.state !== "undefined"){
-                    if(obj.state === "granted"){
-                        if(typeof parentWrapper !== "undefined"){
-                            parentWrapper.style.display = "block";
-                            parentWrapper.style.visibility = "visible";
-                        }
-                        wrapper.style.display = "block";
-                    }
-                }
-            }
-            console.log(event.origin);
-        }, false);
+    (function () {
+        var wzrk = document.createElement('script');
+        wzrk.type = 'text/javascript';
+        wzrk.async = true;
+        wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js?v=0';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wzrk, s);
     })();
+
+    clevertap.notifications.push({
+        "titleText":'Would you like to receive Push Notifications?',
+        "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
+        "okButtonText":'Sign me up!',
+        "rejectButtonText":'No thanks',
+        "okButtonColor":'#f28046',
+        "askAgainTimeInSeconds":1,
+        "httpsPopupPath":"https://ankit-arora.github.io/popup.html",
+        "httpsIframePath":"https://ankit-arora.github.io/iframe.html"
+    });
 </script>
-<iframe style="display: none" src="https://ankit-arora.github.io/iframe.html"></iframe>
+
 </body>
 </html>
